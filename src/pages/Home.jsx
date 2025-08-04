@@ -1,4 +1,5 @@
 import React,{useEffect} from 'react'
+import Intro from '../components/Intro'
 
 export default function Home() {
 
@@ -7,8 +8,8 @@ export default function Home() {
     },[])
 
     return (
-        <>
-            
-        </>
+        <div className="pt-12 lg:pt-16">
+            <Intro />
+        </div>
     )
 }

@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme{
+
+    /* color combinations */
+    --color-secondary: #292826;
+
+    /* Shade Colors */
+    --color-shade1: #6665f1;
+    --color-shade2: #875cf5;
+}
+
+@layer utilities {
+    .font-poppins {
+        font-family: "Poppins", serif;
+    }
+
+    .font-gg {
+        font-family: 'gg sans', sans-serif;
+    }
+}
