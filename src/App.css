@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme{
+@theme {
 
     /* color combinations */
     --color-secondary: #292826;
@@ -8,6 +8,8 @@
     /* Shade Colors */
     --color-shade1: #6665f1;
     --color-shade2: #875cf5;
+    --color-darkBG: #0f172a;
+
 }
 
 @layer utilities {

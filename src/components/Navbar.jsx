@@ -8,14 +8,14 @@ export default function Navbar() {
 
     // toggling the menu
     const toggleMenu = () => {
-        document.querySelector(".menuList").classList.toggle('-translate-y-60');
+        document.querySelector(".menuList").classList.toggle('-translate-y-80');
         document.querySelector('.bi-x-square').classList.toggle('hidden');
     }
 
     // closing Menu List
     const closeMenu = () => {
-        document.querySelector(".menuList").classList.toggle('-translate-y-60');
-        document.querySelector('.bi-x-square').classList.toggle('hidden');
+        document.querySelector(".menuList").classList.add('-translate-y-80');
+        document.querySelector('.bi-x-square').classList.add('hidden');
 
     }
 
@@ -31,7 +31,7 @@ export default function Navbar() {
             <div className="flex flex-row items-center justify-between gap-5 lg:gap-7 xl:gap-9">
 
                 {/* Initial List containing Navigations */}
-                <ul className="menuList absolute top-12 sm:top-16 pt-10 left-5 right-5 bg-secondary/70 -translate-y-60 py-3 rounded-md text-white md:relative list-none flex flex-col md:flex-row md:top-0 md:left-0 md:right-0 md:bg-transparent items-center gap-2 md:gap-3 xl:gap-4 md:p-0 md:text-secondary/80 font-gg text-sm xl:text-base font-semibold md:translate-0 ease-in duration-250">
+                <ul className="menuList absolute top-12 sm:top-16 pt-10 left-5 right-5 bg-secondary/80 -translate-y-80 py-4 rounded-md text-white md:relative list-none flex flex-col md:flex-row md:top-0 md:left-0 md:right-0 md:bg-transparent items-center gap-2 md:gap-3 xl:gap-4 md:p-0 md:text-secondary/80 font-gg text-sm xl:text-base font-semibold md:translate-0 ease-in duration-250">
                     <a href="#" className="md:hover:underline md:hover:underline-offset-8"> Home </a>
                     <Link to="/" className="md:hover:underline md:hover:underline-offset-8"> About </Link>
                     <Link to="/" className="md:hover:underline md:hover:underline-offset-8"> Contact </Link>

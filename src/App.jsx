@@ -4,6 +4,7 @@ import './App.css'
 
 // components regarding navbar and footer 
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 // pages regarding different sections
 import Home from './pages/Home'
@@ -23,6 +24,9 @@ function App() {
             <Routes>
                 <Route index path="/" element={<Home />} />
             </Routes>
+
+            {/* Common footer for every page */}
+            <Footer />
 
         </>
     )
