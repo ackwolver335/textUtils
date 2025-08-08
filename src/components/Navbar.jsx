@@ -20,7 +20,7 @@ export default function Navbar() {
     }
 
     return (
-        <div className="fixed top-0 right-0 left-0 w-full flex flex-row items-center justify-between px-4 sm:px-5 lg:px-8 lg:py-4 py-2 sm:py-3 shadow-md lg:shadow-lg bg-white/60 backdrop-blur-xl">
+        <div className="z-20 fixed top-0 right-0 left-0 w-full flex flex-row items-center justify-between px-4 sm:px-5 lg:px-8 lg:py-4 py-2 sm:py-3 shadow-md lg:shadow-lg bg-white/60 backdrop-blur-xl">
 
             {/* Icon and Site Name */}
             <Link to="/" className="flex flex-row gap-2 xl:gap-3 items-center">
