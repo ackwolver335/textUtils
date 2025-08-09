@@ -27,8 +27,8 @@ function App() {
         return () => clearTimeout(timer);
     },[])
 
-    if(loading) return <Loading fadeOut={fadeOut} />
-    document.querySelector('body').style.animation = "fadeIn 1s ease-in-out";
+    // if(loading) return <Loading fadeOut={fadeOut} />
+    document.querySelector('body').style.animation = "fadeIn 0.8s ease-in-out";
 
     return (
         <>

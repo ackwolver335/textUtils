@@ -3,7 +3,7 @@ import { FileText, Cloud, Users, Lightbulb, Lock, FileDown } from 'lucide-react'
 
 export default function Features() {
     return (
-        <div className="flex flex-col gap-3 sm:gap-5 lg:gap-8 items-center py-10 sm:py-12 lg:py-14 xl:py-22 bg-white">
+        <div className="flex flex-col gap-3 sm:gap-5 lg:gap-8 items-center py-10 sm:py-12 lg:py-14 xl:py-22 bg-white" id="features">
 
             {/* Heading and Intro */}
             <div className="flex flex-col items-center gap-2 md:gap-3 xl:gap-4 text-center">

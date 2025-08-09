@@ -4,6 +4,7 @@ import React,{useEffect} from 'react'
 import Intro from '../components/Intro'
 import Features from '../components/Features'
 import Clock from '../components/Clock'
+import Pricing from '../components/Pricing'
 
 export default function Home() {
 
@@ -16,6 +17,7 @@ export default function Home() {
             <Intro />
             <Clock />
             <Features />
+            <Pricing />
         </div>
     )
 }
