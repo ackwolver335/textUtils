@@ -5,6 +5,7 @@ import Intro from '../components/Intro'
 import Features from '../components/Features'
 import Clock from '../components/Clock'
 import Pricing from '../components/Pricing'
+import Demo from '../components/Demo'
 
 export default function Home() {
 
@@ -16,6 +17,7 @@ export default function Home() {
         <div className="pt-10 sm:pt-12 lg:pt-16">
             <Intro />
             <Clock />
+            <Demo />
             <Features />
             <Pricing />
         </div>

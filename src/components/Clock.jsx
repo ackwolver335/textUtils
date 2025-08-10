@@ -23,18 +23,18 @@ export default function Clock() {
     const checkTime = () => {
 
         // showing time
-        document.querySelector(".digiClock").classList.remove("translate-x-22");
+        document.querySelector(".digiClock").classList.remove("translate-x-23");
 
         // timeout after which it automatically get aside
-        if(!(document.querySelector(".digiClock").classList.contains("translate-x-22"))){
+        if(!(document.querySelector(".digiClock").classList.contains("translate-x-23"))){
             setTimeout(() => {
-            document.querySelector(".digiClock").classList.add("translate-x-22");
+            document.querySelector(".digiClock").classList.add("translate-x-23");
         }, 2000);
         }
     }
 
     return (
-        <div className="z-20 digiClock fixed bg-secondary/70 backdrop-blur-lg rounded-md lg:rounded-xl px-3 py-2 sm:py-3 translate-x-22 top-15 lg:top-30 right-0 flex flex-row items-center gap-3 ease-in duration-150">
+        <div className="z-20 digiClock fixed bg-secondary/70 backdrop-blur-lg rounded-md lg:rounded-xl px-3 py-2 sm:py-3 translate-x-23 top-15 lg:top-30 right-0 flex flex-row items-center gap-3 ease-in duration-150">
 
             {/* Clock Icon to click and get time */}
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-alarm w-5 lg:w-6 cursor-pointer text-white" viewBox="0 0 16 16" onClick={checkTime}>
@@ -43,7 +43,7 @@ export default function Clock() {
             </svg>
 
             {/* time fetched as per your device */}
-            <h3 className="text-sm lg:text-base font-poppins font-semibold text-white">
+            <h3 className="text-sm lg:text-base font-poppins font-semibold ml-1 text-white">
                 {time.hours} : {time.minutes} : {time.meridian}
             </h3>
 

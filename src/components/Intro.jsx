@@ -16,7 +16,7 @@ export default function Intro() {
             {/* button and navigation */}
             <div className="flex flex-col gap-3 lg:gap-4 sm:flex-row items-center">
                 <Link to="/" className="bg-white border border-transparent text-shade1 font-gg font-medium lg:font-semibold text-sm lg:text-base px-3 py-1 lg:px-4 lg:py-2 rounded-md lg:rounded-lg shadow-md lg:shadow-lg active:scale-90 ease-in duration-150 cursor-pointer"> Start Writing </Link>
-                <a href="#" className="bg-transparent border border-white text-white font-gg font-medium lg:font-semibold text-sm lg:text-base px-3 py-1 lg:px-4 lg:py-2 rounded-md lg:rounded-lg shadow-md lg:shadow-lg active:scale-90 ease-in duration-150 cursor-pointer"> Watch Demo </a>
+                <a href="#demo" className="bg-transparent border border-white text-white font-gg font-medium lg:font-semibold text-sm lg:text-base px-3 py-1 lg:px-4 lg:py-2 rounded-md lg:rounded-lg shadow-md lg:shadow-lg active:scale-90 ease-in duration-150 cursor-pointer"> Watch Demo </a>
             </div>
 
         </div>
