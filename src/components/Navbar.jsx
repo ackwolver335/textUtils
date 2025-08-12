@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 // importing the required image
@@ -36,7 +35,7 @@ export default function Navbar() {
                     <Link to="/" className="md:hover:underline md:hover:underline-offset-8"> About </Link>
                     <a href="#features" className="md:hover:underline md:hover:underline-offset-8"> Features </a>
                     <a href="#pricing" className="md:hover:underline md:hover:underline-offset-8"> Pricing </a>
-                    <Link to="/" className="md:hover:underline md:hover:underline-offset-8"> Contact </Link>
+                    <a href="#contact" className="md:hover:underline md:hover:underline-offset-8"> Contact </a>
                     <Link to="/" className="md:hover:underline md:hover:underline-offset-8"> Trial </Link>
                     <Link to="/" className="md:hover:underline md:hover:underline-offset-8 md:hidden"> Get Started </Link>
                 </ul>

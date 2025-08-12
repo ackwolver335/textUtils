@@ -33,8 +33,8 @@ export default function Footer() {
                     <div className="flex flex-col items-start gap-2">
                         <h2 className="text-base lg:text-lg font-poppins text-white font-medium lg:font-semibold"> Product </h2>
                         <ul className="text-white/60 font-gg font-medium lg:font-semibold text-sm lg:text-base flex flex-col list-none gap-2">
-                            <a href="#"> Features </a>
-                            <a href="#"> Pricing </a>
+                            <a href="#features"> Features </a>
+                            <a href="#pricing"> Pricing </a>
                             <a href="#"> Security </a>
                             <a href="#"> Updates </a>
                         </ul>
@@ -45,7 +45,7 @@ export default function Footer() {
                             <a href="#"> About </a>
                             <a href="#"> Blog </a>
                             <a href="#"> Career </a>
-                            <a href="#"> Contact </a>
+                            <a href="#contact"> Contact </a>
                         </ul>
                     </div>
                 </div>

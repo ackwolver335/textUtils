@@ -23,14 +23,13 @@ export default function Clock() {
     const checkTime = () => {
 
         // showing time
-        document.querySelector(".digiClock").classList.remove("translate-x-23");
+        document.querySelector(".digiClock").classList.toggle("translate-x-23");
 
-        // timeout after which it automatically get aside
-        if(!(document.querySelector(".digiClock").classList.contains("translate-x-23"))){
-            setTimeout(() => {
-            document.querySelector(".digiClock").classList.add("translate-x-23");
+        setTimeout(() => {
+            if(!(document.querySelector('.digiClock').classList.contains('translate-x-23'))){
+                document.querySelector(".digiClock").classList.toggle("translate-x-23");
+            }
         }, 2000);
-        }
     }
 
     return (

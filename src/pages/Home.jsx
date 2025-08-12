@@ -6,6 +6,7 @@ import Features from '../components/Features'
 import Clock from '../components/Clock'
 import Pricing from '../components/Pricing'
 import Demo from '../components/Demo'
+import Contact from '../components/Contact'
 
 export default function Home() {
 
@@ -20,6 +21,7 @@ export default function Home() {
             <Demo />
             <Features />
             <Pricing />
+            <Contact />
         </div>
     )
 }
