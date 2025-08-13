@@ -1,6 +1,6 @@
 export default function Intro() {
     return (
-        <div className="bg-linear-120 from-shade1 to-shade2 py-12 md:py-16 lg:py-24 flex flex-col items-center gap-3 lg:gap-5 px-5">
+        <div className="bg-linear-120 from-shade1 to-shade2 py-10 sm:py-12 lg:py-14 xl:py-24 flex flex-col items-center gap-3 lg:gap-5 px-5">
 
             {/* Heading and Description */}
             <div className="flex flex-col items-center gap-3 md:gap-5 xl:gap-6 sm:w-2/3 md:w-3/5 lg:w-3/6 xl:w-5/12">
@@ -12,7 +12,7 @@ export default function Intro() {
 
             {/* button and navigation */}
             <div className="flex flex-col gap-3 lg:gap-4 sm:flex-row items-center">
-                <a href="#intro" className="bg-transparent border border-white text-white font-gg font-medium lg:font-semibold text-sm lg:text-base px-3 py-1 lg:px-4 lg:py-2 rounded-md lg:rounded-lg shadow-md lg:shadow-lg active:scale-90 ease-in duration-150 cursor-pointer"> Learn Our Story </a>
+                <a onClick={(e) => { e.preventDefault(); document.querySelector('#story').scrollIntoView({ behavior: "smooth" }); }} className="bg-transparent border border-white text-white font-gg font-medium lg:font-semibold text-sm lg:text-base px-3 py-1 lg:px-4 lg:py-2 rounded-md lg:rounded-lg shadow-md lg:shadow-lg active:scale-90 ease-in duration-150 cursor-pointer"> Learn Our Story </a>
             </div>
 
         </div>

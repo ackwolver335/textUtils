@@ -20,4 +20,14 @@
     .font-gg {
         font-family: 'gg sans', sans-serif;
     }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
 }

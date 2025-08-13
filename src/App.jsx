@@ -3,13 +3,14 @@
 import './App.css'
 
 // components regarding navbar and footer 
-import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Loading from './components/Loading'
 
 // pages regarding different sections
 import Home from './pages/Home'
 import About from './pages/About'
+import Trials from './pages/Trials'
+import NotFound from './pages/NotFound'
 
 // packages regarding navigation and page routing
 import { Routes, Route } from 'react-router-dom'
@@ -24,27 +25,24 @@ function App() {
         const timer = setTimeout(() => {
             setFadeOut(true);
             setTimeout(() => setLoading(false),700)
-        },3000);
+        },2500);
         return () => clearTimeout(timer);
     },[])
 
+    // regarding page loading animation
     if(loading) return <Loading fadeOut={fadeOut} />
-    document.querySelector('body').style.animation = "fadeIn 0.8s ease-in-out";
+    document.querySelector('body').style.animation = "fadeIn 0.6s ease-in-out";
 
     return (
         <>
-
-            {/* Common Navbar regarding page's redirection */}
-            <Navbar />
 
             {/* Routes regarding different pages navigation */}
             <Routes>
                 <Route index path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/trials" element={<Trials />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
-
-            {/* Common footer for every page */}
-            <Footer />
 
         </>
     )

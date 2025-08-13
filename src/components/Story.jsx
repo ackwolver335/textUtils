@@ -2,7 +2,7 @@ import { Lightbulb } from "lucide-react";
 
 export default function Story() {
     return (
-        <div className="bg-gray-100 py-12 lg:py-16 xl:py-22 px-5 md:px-8 flex flex-col lg:flex-row items-center justify-center gap-6 md:gap-8 lg:gap-12 xl:gap-16 w-full" id="intro">
+        <div className="bg-gray-100 py-12 lg:py-16 xl:py-22 px-5 md:px-8 flex flex-col lg:flex-row items-center justify-center gap-6 md:gap-8 lg:gap-12 xl:gap-16 w-full" id="story">
 
             {/* first Part with para */}
             <div className="flex flex-col items-start gap-3 lg:gap-5 w-fit md:w-2/3 lg:w-2/4">
@@ -17,7 +17,7 @@ export default function Story() {
             </div>
 
             {/* side Image block */}
-            <div className="bg-linear-120 from-shade1/30 to-shade2/50 px-5 py-8 rounded-md lg:rounded-lg shadow-md lg:shadow-lg w-full sm:w-3/4 md:w-3/5 h-40 md:h-60 lg:h-70 lg:w-2/6 flex flex-col items-center justify-center gap-1">
+            <div className="bg-linear-120 from-shade1/30 to-shade2/50 px-5 py-8 rounded-md lg:rounded-lg xl:rounded-xl shadow-md lg:shadow-lg w-full sm:w-3/4 md:w-3/5 h-40 md:h-60 lg:h-70 lg:w-2/6 flex flex-col items-center justify-center gap-1">
                 <Lightbulb className="text-shade1 w-10 h-10 lg:w-14 lg:h-14" />
                 <h3 className="text-lg font-poppins text-shade1 font-semibold lg:font-bold"> From Idea to Reality </h3>
                 <p className="text-sm xl:text-base font-gg font-medium lg:text-shade2 lg:font-semibold">

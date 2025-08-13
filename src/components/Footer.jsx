@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 // image for footer Icon
 import Icon from '../assets/icons/android-chrome-192x192.png'
 
 export default function Footer() {
+
+    // regarding page navigation
+    let navigate = useNavigate();
 
     // current year storing state
     const [currentYear,setCurrentYear] = useState('');
@@ -34,19 +37,19 @@ export default function Footer() {
                     <div className="flex flex-col items-start gap-2">
                         <h2 className="text-base lg:text-lg font-poppins text-white font-medium lg:font-semibold"> Product </h2>
                         <ul className="text-white/60 font-gg font-medium lg:font-semibold text-sm lg:text-base flex flex-col list-none gap-2">
-                            <a href="#features"> Features </a>
-                            <a href="#pricing"> Pricing </a>
-                            <a href="#"> Security </a>
-                            <a href="#"> Updates </a>
+                            <a onClick={(e) => { e.preventDefault(); navigate('/'); document.querySelector('#features').scrollIntoView({ behavior: "smooth" }); }}> Features </a>
+                            <a onClick={(e) => { e.preventDefault(); navigate('/'); document.querySelector('#pricing').scrollIntoView({ behavior: "smooth" }); }}> Pricing </a>
+                            <a onClick={(e) => { e.preventDefault(); navigate('/about'); document.querySelector('#story').scrollIntoView({ behavior: "smooth" }); }}> Story </a>
+                            <a onClick={(e) => { e.preventDefault(); navigate('/about'); document.querySelector('#values').scrollIntoView({ behavior: "smooth" }); }}> Values </a>
                         </ul>
                     </div>
                     <div className="flex flex-col items-start gap-2">
                         <h2 className="text-base lg:text-lg font-poppins text-white font-medium lg:font-semibold"> Company </h2>
                         <ul className="text-white/60 font-gg font-medium lg:font-semibold text-sm lg:text-base flex flex-col list-none gap-2">
                             <Link to="/about"> About </Link>
-                            <a href="#"> Blog </a>
-                            <a href="#"> Career </a>
-                            <a href="#contact"> Contact </a>
+                            <Link to="/"> Blog </Link>
+                            <Link to="/"> Career </Link>
+                            <a onClick={(e) => { e.preventDefault(); navigate('/'); document.querySelector('#contact').scrollIntoView({ behavior: "smooth" }); }}> Contact </a>
                         </ul>
                     </div>
                 </div>

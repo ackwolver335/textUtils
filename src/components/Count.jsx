@@ -32,13 +32,13 @@ export default function Count() {
 
             {/* for active Users */}
             <div className="flex flex-col items-center gap-1 lg:gap-2">
-                <h3 className="font-poppins font-semibold text-lg md:text-2xl xl:text-4xl lg:font-bold text-shade2"> <Counter targetNum={2} duration={2000}/>+ </h3>
+                <h3 className="font-poppins font-semibold text-lg md:text-2xl xl:text-4xl lg:font-bold text-shade2"> <Counter targetNum={20} duration={2000}/>+ </h3>
                 <p className="text-sm lg:text-base font-gg font-semibold text-secondary/80"> Active Users </p>
             </div>
 
             {/* documents Created */}
             <div className="flex flex-col items-center gap-1 lg:gap-2">
-                <h3 className="font-poppins font-semibold text-lg md:text-2xl xl:text-4xl lg:font-bold text-shade2"> <Counter targetNum={50} duration={2000}/>+ </h3>
+                <h3 className="font-poppins font-semibold text-lg md:text-2xl xl:text-4xl lg:font-bold text-shade2"> <Counter targetNum={5000} duration={2000}/>+ </h3>
                 <p className="text-sm lg:text-base font-gg font-semibold text-secondary/80"> Documents Created </p>
             </div>
 

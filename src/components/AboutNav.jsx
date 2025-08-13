@@ -31,16 +31,15 @@ export default function Navbar() {
 
                 {/* Initial List containing Navigations */}
                 <ul className="menuList absolute top-12 sm:top-16 pt-10 left-5 right-5 bg-secondary/80 -translate-y-80 py-4 rounded-md text-white md:relative list-none flex flex-col md:flex-row md:top-0 md:left-0 md:right-0 md:bg-transparent items-center gap-2 md:gap-3 xl:gap-4 md:p-0 md:text-secondary/80 font-gg text-sm xl:text-base font-semibold md:translate-0 ease-in duration-250">
-                    <Link to="/about" className="md:hover:underline md:hover:underline-offset-8"> About </Link>
-                    <a onClick={(e) => { e.preventDefault(); document.querySelector('#features').scrollIntoView({ behavior: "smooth" }) }} className="md:hover:underline md:hover:underline-offset-8 cursor-pointer"> Features </a>
-                    <a onClick={(e) => { e.preventDefault(); document.querySelector('#pricing').scrollIntoView({ behavior: "smooth" }) }} className="md:hover:underline md:hover:underline-offset-8 cursor-pointer"> Pricing </a>
-                    <a onClick={(e) => { e.preventDefault(); document.querySelector('#contact').scrollIntoView({ behavior: "smooth" }) }} className="md:hover:underline md:hover:underline-offset-8 cursor-pointer"> Contact </a>
+                    <Link to="/" className="md:hover:underline md:hover:underline-offset-8"> Home </Link>
+                    <a onClick={(e) => { e.preventDefault(); document.querySelector('#story').scrollIntoView({ behavior: "smooth" }) }} className="md:hover:underline md:hover:underline-offset-8 cursor-pointer"> Story </a>
+                    <a onClick={(e) => { e.preventDefault(); document.querySelector('#values').scrollIntoView({ behavior: "smooth" }) }} className="md:hover:underline md:hover:underline-offset-8 cursor-pointer"> Values </a>
                     <Link to="/trials" className="md:hover:underline md:hover:underline-offset-8"> Trial </Link>
-                    <Link to="/" className="md:hover:underline md:hover:underline-offset-8 md:hidden"> Get Started </Link>
+                    <a onClick={(e) => { e.preventDefault(); document.querySelector('#join').scrollIntoView({ behavior: "smooth" }) }} className="md:hover:underline md:hover:underline-offset-8 md:hidden cursor-pointer"> Get Started </a>
                 </ul>
 
                 {/* Get Started button */}
-                <Link to="/" className="font-poppins font-medium lg:font-semibold cursor-pointer text-sm lg:text-base text-white bg-shade1 px-3 py-1 lg:py-2 rounded-md lg:rounded-lg shadow-md ease-in duration-150 active:scale-90 hidden md:block"> Get Started </Link>
+                <a onClick={(e) => { e.preventDefault(); document.querySelector('#join').scrollIntoView({ behavior: "smooth" }) }} className="font-poppins font-medium lg:font-semibold cursor-pointer text-sm lg:text-base text-white bg-shade1 px-3 py-1 lg:py-2 rounded-md lg:rounded-lg shadow-md ease-in duration-150 active:scale-90 hidden md:block"> Get Started </a>
 
             </div>
 
