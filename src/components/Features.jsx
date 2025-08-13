@@ -1,4 +1,3 @@
-import React from 'react'
 import { FileText, Cloud, Users, Lightbulb, Lock, FileDown } from 'lucide-react'
 
 export default function Features() {

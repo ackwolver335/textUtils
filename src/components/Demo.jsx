@@ -36,7 +36,7 @@ export default function Demo() {
     }
 
     useEffect(() => {
-        if(functions.fontSize > 20) setFunctions(prev => ({...prev, fontSize: 12}))
+        if(functions.fontSize > 20 || functions.fontSize < 10) setFunctions(prev => ({...prev, fontSize: 12}))
     },[functions.fontSize])
 
     return (

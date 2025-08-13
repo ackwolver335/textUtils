@@ -9,6 +9,7 @@ import Loading from './components/Loading'
 
 // pages regarding different sections
 import Home from './pages/Home'
+import About from './pages/About'
 
 // packages regarding navigation and page routing
 import { Routes, Route } from 'react-router-dom'
@@ -27,7 +28,7 @@ function App() {
         return () => clearTimeout(timer);
     },[])
 
-    // if(loading) return <Loading fadeOut={fadeOut} />
+    if(loading) return <Loading fadeOut={fadeOut} />
     document.querySelector('body').style.animation = "fadeIn 0.8s ease-in-out";
 
     return (
@@ -39,6 +40,7 @@ function App() {
             {/* Routes regarding different pages navigation */}
             <Routes>
                 <Route index path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
             </Routes>
 
             {/* Common footer for every page */}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 // image for footer Icon
 import Icon from '../assets/icons/android-chrome-192x192.png'
@@ -42,7 +43,7 @@ export default function Footer() {
                     <div className="flex flex-col items-start gap-2">
                         <h2 className="text-base lg:text-lg font-poppins text-white font-medium lg:font-semibold"> Company </h2>
                         <ul className="text-white/60 font-gg font-medium lg:font-semibold text-sm lg:text-base flex flex-col list-none gap-2">
-                            <a href="#"> About </a>
+                            <Link to="/about"> About </Link>
                             <a href="#"> Blog </a>
                             <a href="#"> Career </a>
                             <a href="#contact"> Contact </a>

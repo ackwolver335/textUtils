@@ -31,8 +31,8 @@ export default function Navbar() {
 
                 {/* Initial List containing Navigations */}
                 <ul className="menuList absolute top-12 sm:top-16 pt-10 left-5 right-5 bg-secondary/80 -translate-y-80 py-4 rounded-md text-white md:relative list-none flex flex-col md:flex-row md:top-0 md:left-0 md:right-0 md:bg-transparent items-center gap-2 md:gap-3 xl:gap-4 md:p-0 md:text-secondary/80 font-gg text-sm xl:text-base font-semibold md:translate-0 ease-in duration-250">
-                    <a href="#" className="md:hover:underline md:hover:underline-offset-8"> Home </a>
-                    <Link to="/" className="md:hover:underline md:hover:underline-offset-8"> About </Link>
+                    <Link to="/" className="md:hover:underline md:hover:underline-offset-8"> Home </Link>
+                    <Link to="/about" className="md:hover:underline md:hover:underline-offset-8"> About </Link>
                     <a href="#features" className="md:hover:underline md:hover:underline-offset-8"> Features </a>
                     <a href="#pricing" className="md:hover:underline md:hover:underline-offset-8"> Pricing </a>
                     <a href="#contact" className="md:hover:underline md:hover:underline-offset-8"> Contact </a>
