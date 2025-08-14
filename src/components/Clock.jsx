@@ -15,7 +15,7 @@ export default function Clock() {
         setTime({
             hours: hour > 12 ? date.getHours() - 12 : date.getHours(),
             minutes: date.getMinutes(),
-            meridian: hour > 12 ? 'PM' : 'AM'
+            meridian: hour >= 12 ? 'PM' : 'AM'
         });
     }, 1000);
 

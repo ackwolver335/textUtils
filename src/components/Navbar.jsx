@@ -36,11 +36,11 @@ export default function Navbar() {
                     <a onClick={(e) => { e.preventDefault(); document.querySelector('#pricing').scrollIntoView({ behavior: "smooth" }) }} className="md:hover:underline md:hover:underline-offset-8 cursor-pointer"> Pricing </a>
                     <a onClick={(e) => { e.preventDefault(); document.querySelector('#contact').scrollIntoView({ behavior: "smooth" }) }} className="md:hover:underline md:hover:underline-offset-8 cursor-pointer"> Contact </a>
                     <Link to="/trials" className="md:hover:underline md:hover:underline-offset-8"> Trial </Link>
-                    <Link to="/" className="md:hover:underline md:hover:underline-offset-8 md:hidden"> Get Started </Link>
+                    <Link to="/trials" className="md:hover:underline md:hover:underline-offset-8 md:hidden"> Get Started </Link>
                 </ul>
 
                 {/* Get Started button */}
-                <Link to="/" className="font-poppins font-medium lg:font-semibold cursor-pointer text-sm lg:text-base text-white bg-shade1 px-3 py-1 lg:py-2 rounded-md lg:rounded-lg shadow-md ease-in duration-150 active:scale-90 hidden md:block"> Get Started </Link>
+                <Link to="/trials" className="font-poppins font-medium lg:font-semibold cursor-pointer text-sm lg:text-base text-white bg-shade1 px-3 py-1 lg:py-2 rounded-md lg:rounded-lg shadow-md ease-in duration-50 active:scale-90 hidden md:block"> Get Started </Link>
 
             </div>
 

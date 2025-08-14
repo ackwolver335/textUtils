@@ -30,7 +30,7 @@ function App() {
     },[])
 
     // regarding page loading animation
-    if(loading) return <Loading fadeOut={fadeOut} />
+    // if(loading) return <Loading fadeOut={fadeOut} />
     document.querySelector('body').style.animation = "fadeIn 0.6s ease-in-out";
 
     return (
