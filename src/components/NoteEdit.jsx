@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 export default function NoteEdit(props) {
 
@@ -13,7 +13,7 @@ export default function NoteEdit(props) {
         fontFamily: 'gg',
         clearAll: false,
         textAlign: 'left',
-        textContent: '',
+        textContent: 'here you go with the text...',
         textDelete: false,
         textCopied: false
     })
@@ -26,26 +26,33 @@ export default function NoteEdit(props) {
 
     // timer for setting delete and copies after 3 seconds
     const deleteContent = () => {
-        setUserText(prev => ({ ...prev, textDelete: true }));
+        setUserText(prev => ({ ...prev, textDelete: true, textCopied: false, textContent: '' }));
         setTimeout(() => {
             setUserText(prev => ({ ...prev, textDelete: false }))
         }, 3000);
     }
 
+    // in order to copy the content of the Note
     const copyContent = () => {
-        if (!(userText.textDelete)) {
+        if (!(userText.textDelete) && userText.textContent !== '') {
             setUserText(prev => ({ ...prev, textCopied: true }));
+            navigator.clipboard.writeText(userText.textContent);
             setTimeout(() => {
                 setUserText(prev => ({ ...prev, textCopied: false }))
             }, 3000);
         }
     }
 
+    // handling main text value
+    const handleText = (e) => {
+        setUserText(prev => ({ ...prev, textContent: e.target.value }));
+    }
+
     return (
-        <div className="w-full px-5 py-4 md:py-5 md:px-8 flex items-center justify-center bg-white">
+        <div className="w-full px-5 py-4 md:py-5 md:px-8 lg:py-8 flex items-center justify-center bg-white">
 
             {/* main Text Editor Div */}
-            <div className="w-2/3 px-3 py-2 md:py-4 rounded-md lg:rounded-lg shadow-md lg:shadow-lg bg-white">
+            <div className="w-2/3 px-3 py-2 md:py-4 rounded-md lg:rounded-lg shadow-md lg:shadow-lg bg-white space-y-4 lg:space-y-6">
 
                 {/* initial block regarding text editing */}
                 <div className="flex flex-row flex-wrap py-2 px-3 items-center gap-2 lg:gap-4 xl:gap-5 justify-start border-b-2 border-secondary/40">
@@ -81,28 +88,28 @@ export default function NoteEdit(props) {
                     <div className="flex flex-row items-center gap-2 lg:gap-3">
 
                         {/* justify-text content */}
-                        <div title='Justify Text' className={`p-1 lg:p-[6px] cursor-pointer ${userText.textAlign === 'justify' ? 'bg-secondary/10' : 'bg-transparent'} rounded-md lg:rounded-lg`} onClick={() => { if (userText.textAlign !== 'justify') setUserText(prev => ({ ...prev, textAlign: 'justify' })) }}>
+                        <div title='Justify Text' className={`p-1 lg:p-[6px] cursor-pointer ${userText.textAlign === 'justify' ? 'bg-secondary/10' : 'bg-transparent'} rounded-md lg:rounded-lg`} onClick={() => { setUserText(prev => ({ ...prev, textAlign: 'justify' })) }}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-justify text-secondary/80 w-5" viewBox="0 0 16 16">
                                 <path fillRule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
                             </svg>
                         </div>
 
                         {/* center-text content */}
-                        <div title='Center Text' className={`p-1 lg:p-[6px] cursor-pointer ${userText.textAlign === 'center' ? 'bg-secondary/10' : 'bg-transparent'} rounded-md lg:rounded-lg`} onClick={() => { if (userText.textAlign !== 'center') setUserText(prev => ({ ...prev, textAlign: 'center' })) }}>
+                        <div title='Center Text' className={`p-1 lg:p-[6px] cursor-pointer ${userText.textAlign === 'center' ? 'bg-secondary/10' : 'bg-transparent'} rounded-md lg:rounded-lg`} onClick={() => { setUserText(prev => ({ ...prev, textAlign: 'center' })) }}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-text-center text-secondary/80 w-5" viewBox="0 0 16 16">
                                 <path fillRule="evenodd" d="M4 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
                             </svg>
                         </div>
 
                         {/* left-text content */}
-                        <div title='Left Alignment' className={`p-1 lg:p-[6px] cursor-pointer ${userText.textAlign === 'left' ? 'bg-secondary/10' : 'bg-transparent'} rounded-md lg:rounded-lg`} onClick={() => { if (userText.textAlign !== 'left') setUserText(prev => ({ ...prev, textAlign: 'left' })) }}>
+                        <div title='Left Alignment' className={`p-1 lg:p-[6px] cursor-pointer ${userText.textAlign === 'left' ? 'bg-secondary/10' : 'bg-transparent'} rounded-md lg:rounded-lg`} onClick={() => { setUserText(prev => ({ ...prev, textAlign: 'left' })) }}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-text-left text-secondary/80 w-5" viewBox="0 0 16 16">
                                 <path fillRule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
                             </svg>
                         </div>
 
                         {/* right-text content */}
-                        <div title='Right Alignment' className={`p-1 lg:p-[6px] cursor-pointer ${userText.textAlign === 'right' ? 'bg-secondary/10' : 'bg-transparent'} rounded-md lg:rounded-lg`} onClick={() => { if (userText.textAlign !== 'right') setUserText(prev => ({ ...prev, textAlign: 'right' })) }}>
+                        <div title='Right Alignment' className={`p-1 lg:p-[6px] cursor-pointer ${userText.textAlign === 'right' ? 'bg-secondary/10' : 'bg-transparent'} rounded-md lg:rounded-lg`} onClick={() => { setUserText(prev => ({ ...prev, textAlign: 'right' })) }}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-text-right text-secondary/80 w-5" viewBox="0 0 16 16">
                                 <path fillRule="evenodd" d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
                             </svg>
@@ -151,6 +158,22 @@ export default function NoteEdit(props) {
                         }
 
                     </div>
+
+                </div>
+
+                {/* block regarding user input and operations */}
+                <textarea value={userText.textContent} className={`resize-none w-full h-20 md:h-40 focus:outline-none border-2 rounded-md lg:rounded-lg px-3 py-2 md:px-4 lg:px-5 lg:py-3  border-secondary/20 text-sm lg:text-base font-${userText.fontFamily} ${userText.boldText ? 'font-bold' : 'font-medium'} ${userText.italicText ? 'italic' : ''} ${userText.underlineText ? 'underline' : ''} text-${userText.textAlign}`} onChange={handleText} onFocus={(e) => { e.preventDefault(); setUserMode('write'); }} onBlur={() => { setUserMode('read') }}></textarea>
+
+                {/* details about the available content */}
+                <div className="px-3 py-2 md:px-4 lg:px-5 lg:py-3 bg-gray-100 rounded-b-md lg:rounded-b-lg border-t-2 border-secondary/20 flex flex-row items-start gap-3 lg:gap-5">
+
+                    {/* text detailed overview */}
+                    <h3 className="text-sm lg:text-base font-gg font-medium text-secondary/80"> {userText.textContent.split(/\s+/).filter((element) => { return element.length !== 0 }).length} words </h3>
+
+                    {/* delimeter block regarding different options seperations */}
+                    <div className="w-[2px] md:w-[3px] rounded-full h-5 md:h-6 bg-secondary/60 lg:bg-secondary/40 lg:rounded-none"></div>
+
+                    <h3 className="text-sm lg:text-base font-gg font-medium text-secondary/80"> {(userText.textContent.length * 0.008).toFixed(1)} Reading Minutes </h3>
 
                 </div>
 

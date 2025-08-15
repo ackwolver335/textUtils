@@ -23,7 +23,7 @@ export default function TrialNav(props) {
 
             {/* working & details */}
             <div className="flex flex-row items-center gap-3 lg:gap-5">
-                <div className="flex flex-row items-center gap-2 text-sm lg:text-base font-poppins text-shade1 font-semibold"> <div className="p-1 lg:p-[6px] bg-shade1 rounded-full h-fit w-fit animate-pulse"></div> {userMode == 'read' ? 'Read Mode' : 'Write Mode'} </div>
+                <div className="flex flex-row items-center gap-2 text-sm lg:text-base font-poppins text-shade1 font-semibold"> <div className={`p-1 lg:p-[6px] bg-shade1 rounded-full h-fit w-fit ${userMode === 'read' ? '' : 'animate-pulse'}`}></div> {userMode == 'read' ? 'Read Mode' : 'Write Mode'} </div>
                 <button className="px-2 py-1 md:px-3 md:py-2 lg:px-4 text-white bg-shade1 rounded-md lg:rounded-lg text-sm flex flex-row items-center gap-2 font-poppins font-semibold lg:text-base active:scale-90 ease-in duration-75 cursor-pointer shadow-md lg:shadow-lg" onClick={(e) => { e.preventDefault(); navigate("/"); }}> <Star className="w-5 h-5 lg:w-6 lg:h-6" /> Upgrade Pro Version </button>
             </div>
 
